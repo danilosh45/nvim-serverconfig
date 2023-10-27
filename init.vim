@@ -75,7 +75,12 @@ nnoremap ss :split<CR>
 autocmd FileType netrw nmap <buffer> N :call inputsave()\|let name = input('Enter file name: ')\|call inputrestore()\|execute 'e %:h/' . name<CR>
 " En el explorador de archivos, regresa al directorio padre con 'h'
 " autocmd FileType netrw nnoremap <buffer> h :Explore ..<CR>
-
+ "Moverse entre buffers cuando hago split tanto vertical momo horizontal
+nnoremap <Space> <C-w>
+nnoremap sh <C-w>h
+nnoremap sk <C-w>k
+nnoremap sj <C-w>j
+nnoremap sl <C-w>l
 "Define el esquema de colores personalizado
 highlight Normal guifg=#d3b58d guibg=#041818
 highlight Comment guifg=#3fdflf
